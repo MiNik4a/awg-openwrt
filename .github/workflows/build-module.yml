@@ -23,11 +23,6 @@ jobs:
             target: x86
             subtarget: generic
             vermagic: "c7ce0800217ae01ddd310689dc4b6d31"
-          - tag: "23.05.3"
-            pkgarch: all
-            target: x86
-            subtarget: generic
-            vermagic: "c7ce0800217ae01ddd310689dc4b6d31"
 
     steps:
       - uses: actions/checkout@v4
@@ -117,7 +112,6 @@ jobs:
           tag_name=${{  github.ref_name }}
           mkdir -p awgrelease
           postfix="${tag_name}_v${{ matrix.build_env.tag }}_${{ matrix.build_env.pkgarch}}_${{ matrix.build_env.target}}_${{ matrix.build_env.subtarget}}"
-          ls bin/targets/
           cp bin/packages/${{ matrix.build_env.pkgarch }}/awgopenwrt/amneziawg-tools_*.ipk awgrelease/amneziawg-tools_${postfix}.ipk
           cp bin/packages/${{ matrix.build_env.pkgarch }}/awgopenwrt/luci-app-amneziawg_*.ipk awgrelease/luci-app-amneziawg_${postfix}.ipk
           cp bin/targets/${{ matrix.build_env.target}}/${{ matrix.build_env.subtarget}}/packages/kmod-amneziawg_*.ipk awgrelease/kmod-amneziawg_${postfix}.ipk
