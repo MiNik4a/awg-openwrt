@@ -19,7 +19,7 @@ jobs:
             subtarget: mt7622
             vermagic: "03c9d191cd600eae3e66845031612f0a"
           - tag: "23.05.3"
-            pkgarch: x86_64
+            pkgarch: i386_pentium4
             target: x86
             subtarget: generic
             vermagic: "c7ce0800217ae01ddd310689dc4b6d31"
