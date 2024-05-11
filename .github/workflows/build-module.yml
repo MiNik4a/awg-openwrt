@@ -22,7 +22,7 @@ jobs:
             pkgarch: x86
             target: x86
             subtarget: generic
-            vermagic: "03c9d191cd600eae3e66845031612f0a"
+            vermagic: "c7ce0800217ae01ddd310689dc4b6d31"
 
     steps:
       - uses: actions/checkout@v4
